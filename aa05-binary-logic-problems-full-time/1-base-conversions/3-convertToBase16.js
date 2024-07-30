@@ -4,7 +4,13 @@
 
 const convertToBase16 = element => {
   // Your code here 
+  if (element[1] === 'b'){
+    return "0x" + parseInt(element.slice(2), 2).toString(16);
+  } else{
+    return "0x" + element.toString(16);
+  }
 };
+
 
 /******************************************************************************/
 

@@ -6,8 +6,26 @@ const addZeros = require('../utils/addZeros');
 
 /******************************************************************************/
 
+function dec(str) {
+  const result = [];
+  for(let i = 0; i < str.length; i++){
+    result.push(str.charCodeAt(i));
+  }
+  return result;
+}
+
 const asciiTo8bit = str => {
-  // Your code here 
+  let decimal = dec(str);
+  let arr =[];
+  const result = decimal.map((item) => {
+    // console.log(item)
+    let n = item.toString(2); //convert to binary
+    // console.log(n)
+    arr.push(addZeros(n, 8)) // add zeros to 8 digits
+  })
+
+  return arr.join('');
+
 };
 
 /******************************************************************************/
