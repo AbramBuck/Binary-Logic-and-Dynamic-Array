@@ -8,13 +8,19 @@ const { or, and, calculateTruthTable } = require('../../utils/truthTableHelpers'
 //    -------------------
 //    0    1      ?
 
-//    1. !A -> 1
-//    2. calculateTruthTable(0, and, 1) -> 0
-//    3. calculateTruthTable(1, or, 0) -> 1
-//    4. Answer: 1
+
+//:
+/**
+     1. !A = 0
+     2. calculateTruthTable(1, and, 1); -> 1
+     3. calculateTruthTable(1, or, 0); -> 
+*/
+
+calculateTruthTable(0, or, 1);
+
 
 /******************************************************************************/
 
 // Update arguments to calculate and console.log returned value
-calculateTruthTable(0, and, 1); // 0
-calculateTruthTable(1, or, 0); // 1
+// calculateTruthTable(0, and, 1); // 0
+// calculateTruthTable(1, or, 0); // 1
